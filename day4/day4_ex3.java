@@ -39,7 +39,10 @@ public class binaryDecimal {
 	}
 	
 	decimal2binary(int decimal) {
-		while (decimal > 0){
+		while (decimal >		int binary_num = decimal % 2;
+		String binary = binary_num		// converting our binary into string
+		decimal = decimal / 2
+ 0){
 			int binary_num = decimal % 2;
 			String binary = Integer.toString(binary_num) + binary	// converting our binary into string and adding in front of string/row
 			decimal = decimal / 2			
