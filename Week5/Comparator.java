@@ -1,4 +1,10 @@
 public class Comparator {
+	
+	public static void main(String[] args){
+		
+	
+	}
+	
 	public int getMax(int n, int m) {
 		if (n > m) {
 			return n;
