@@ -1,0 +1,19 @@
+Week 5 Day 10 
+
+
+Differences between iterative loops and recursive approaches 
+
+1. Explicit loop: for, while... 			1. Implicit loop (recursion) 
+
+2. Accumulator								2. No Accumulator
+
+3.External observer							3. No external observer 
+	- external class
+		- external counter 
+
+4. Longer code								4. Shorter code - thus usually clearer
+	(not clear in the contrived example)		(at least for people who understand recursion)
+
+5. Sometimes more natural, sometimes less	5. Sometimes more natural, sometimes less
+
+6. Uses one level of the stack				6. Uses many levels of the stack (not a problem for 99% of your work - memory and greater power)

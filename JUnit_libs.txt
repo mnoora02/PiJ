@@ -1,0 +1,545 @@
+JUnit - Java tests on strings 
+
+
+Last login: Wed Nov  9 12:20:26 on ttys000
+Macintosh-7:~ taxi$ cd /user/taxi/documents
+-bash: cd: /user/taxi/documents: No such file or directory
+Macintosh-7:~ taxi$ ls -a ~/.profile
+ls: /Users/taxi/.profile: No such file or directory
+Macintosh-7:~ taxi$ ls -a ~|more
+.
+..
+.CFUserTextEncoding
+.DS_Store
+.Trash
+.Xcode
+.bash_history
+.bash_profile
+.bash_profile.pysave
+.bash_profile.save
+.bash_profile.save.1
+.bashrc
+.cups
+.dropbox
+.dvdcss
+.git-completion.bash
+.gitconfig
+.groovy
+.gvm
+.ht.sqlite
+.idlerc
+.kodi
+.lesshst
+Macintosh-7:~ taxi$ vi ~/.bashrc
+Macintosh-7:~ taxi$ . ~/.bashrc
+Macintosh-7:~ taxi$ set|more
+ASCIIDOCTORJ_HOME=/Users/taxi/.gvm/asciidoctorj/current
+Apple_PubSub_Socket_Render=/tmp/launch-0NoQPU/Render
+BASH=/bin/bash
+BASH_ARGC=()
+BASH_ARGV=()
+BASH_LINENO=()
+BASH_SOURCE=()
+BASH_VERSINFO=([0]="3" [1]="2" [2]="48" [3]="1" [4]="release" [5]="x86_64-apple-darwin10.0")
+BASH_VERSION='3.2.48(1)-release'
+CLASSPATH=:/Users/taxi/Documents/JUnit_libs/junit-4.12.jar:/Users/taxi/Documents/JUnit_libs/hamcrest-core-1.3.jar
+COLUMNS=80
+COMMAND_MODE=unix2003
+COMP_WORDBREAKS=$' \t\n"\'@><=;|&(:'
+CRASH_HOME=/Users/taxi/.gvm/crash/current
+DIRSTACK=()
+DISPLAY=/tmp/launch-1Zqvji/org.x:0
+EUID=507
+GAIDEN_HOME=/Users/taxi/.gvm/gaiden/current
+GLIDE_HOME=/Users/taxi/.gvm/glide/current
+GRADLE_HOME=/Users/taxi/.gvm/gradle/current
+GRAILS_HOME=/Users/taxi/.gvm/grails/current
+Macintosh-7:~ taxi$ !vim
+-bash: !vim: event not found
+Macintosh-7:~ taxi$ !vi
+vi ~/.bashrc
+Macintosh-7:~ taxi$ . ~/.bashrc 
+Macintosh-7:~ taxi$ ls
+AT.postflight.345		Movies
+AT.postflight.5114		Music
+Applications			Pictures
+Bank Statements - Barclays	Public
+Bank Statements - HSBC		Safes
+CVs pls				Sites
+Desktop				database
+Documents			mnt
+Downloads			my-chrome-output.csv
+HMG pay statements		old.sqlite
+HMRC				segeek.groovy
+History				tdd-workshop
+Library				untitled folder
+MSc_GUI
+Macintosh-7:~ taxi$ cd Documents/
+Macintosh-7:Documents taxi$ ls
+AppleWorks User Data
+Booking Information.doc
+Financial Summar.xls
+ISD_T2_cwk.py
+JUnit_libs
+Microsoft User Data
+Mo Noorani Prince2 Foundation and Practitioner.xls
+Practice groovy.doc
+Presentation1.pptx
+Test2.txt
+applications 1 & 2.doc
+av.py
+copieddata.txt
+isugvilusv.py
+labFour.csv
+labFour.py
+libs
+lotteryjpa-1.pdf
+newfile.txt
+test.py
+workspace
+Macintosh-7:Documents taxi$ cd 
+Macintosh-7:~ taxi$ cd
+Macintosh-7:~ taxi$ ls
+AT.postflight.345		Movies
+AT.postflight.5114		Music
+Applications			Pictures
+Bank Statements - Barclays	Public
+Bank Statements - HSBC		Safes
+CVs pls				Sites
+Desktop				database
+Documents			mnt
+Downloads			my-chrome-output.csv
+HMG pay statements		old.sqlite
+HMRC				segeek.groovy
+History				tdd-workshop
+Library				untitled folder
+MSc_GUI
+Macintosh-7:~ taxi$ cd desktop
+Macintosh-7:desktop taxi$ ls
+3mi
+A Guide to working as a film extra in the UK_files
+Abc
+Amar
+CWK
+Green
+IT
+Java - practice
+Movies
+Nur
+OS-2
+PiJ_inside
+Russian
+Skype
+YT_intro_to_web_scraping.py
+YTwebscrape1.py
+YTwebscrape1A.py
+got
+Macintosh-7:desktop taxi$ cd PiJ_inside/
+Macintosh-7:PiJ_inside taxi$ ls
+Nathan_DKM.sql		PiJ			outOfClassPractice
+Macintosh-7:PiJ_inside taxi$ cd PiJ/
+Macintosh-7:PiJ taxi$ ls
+Factorial.java		Phone.java		Week_04
+Fibonacci.java		PhoneLauncher.class	Week_05
+MobilePhone.class	PhoneLauncher.java	Week_06
+MobilePhone.java	PiJ_Week_5_Day_10.txt	buggyMethod.java
+OldPhone.class		Week_01			printNumbers.java
+OldPhone.java		Week_02
+Phone.class		Week_03
+Macintosh-7:PiJ taxi$ cd Week_06
+Macintosh-7:Week_06 taxi$ ls
+Day_11	Day_12
+Macintosh-7:Week_06 taxi$ cd Day_12
+Macintosh-7:Day_12 taxi$ ls
+Person.java	PersonTest.java
+Macintosh-7:Day_12 taxi$ javac Person.java 
+Macintosh-7:Day_12 taxi$ java Person
+Exception in thread "main" java.lang.NoSuchMethodError: main
+Macintosh-7:Day_12 taxi$ javac Person.java 
+Person.java:3: missing method body, or declare abstract
+	public static void main(String[] args);
+	                   ^
+1 error
+Macintosh-7:Day_12 taxi$ javac Person.java 
+Macintosh-7:Day_12 taxi$ java Person
+Macintosh-7:Day_12 taxi$ javac PersonTest.java 
+Macintosh-7:Day_12 taxi$ java PersonTest
+Exception in thread "main" java.lang.NoSuchMethodError: main
+Macintosh-7:Day_12 taxi$ javac Person.java 
+Macintosh-7:Day_12 taxi$ java Person
+Exception in thread "main" java.lang.NoSuchMethodError: main
+Macintosh-7:Day_12 taxi$ javac PersonTest.java 
+Macintosh-7:Day_12 taxi$ java PersonTest
+Exception in thread "main" java.lang.NoSuchMethodError: main
+Macintosh-7:Day_12 taxi$ javac PersonTest.java 
+Macintosh-7:Day_12 taxi$ java PersonTest
+Exception in thread "main" java.lang.NoSuchMethodError: main
+Macintosh-7:Day_12 taxi$ java org.junit.runner.JUnitCore PersonTest
+JUnit version 4.12
+.
+Time: 0.009
+
+OK (1 test)
+
+Macintosh-7:Day_12 taxi$ javac PersonTest.java 
+Macintosh-7:Day_12 taxi$ java org.junit.runner.JUnitCore PersonTest
+JUnit version 4.12
+.
+Time: 0.013
+
+OK (1 test)
+
+Macintosh-7:Day_12 taxi$ javac PersonTest.java 
+Macintosh-7:Day_12 taxi$ java org.junit.runner.JUnitCore PersonTest
+JUnit version 4.12
+.E
+Time: 0.059
+There was 1 failure:
+1) testsNormalName(PersonTest)
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.fail(Assert.java:95)
+	at PersonTest.testsNormalName(PersonTest.java:12)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:77)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:36)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+Macintosh-7:Day_12 taxi$ java org.junit.runner.JUnitCore PersonTest
+JUnit version 4.12
+.E
+Time: 0.016
+There was 1 failure:
+1) testsNormalName(PersonTest)
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.fail(Assert.java:95)
+	at PersonTest.testsNormalName(PersonTest.java:12)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:77)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:36)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+Macintosh-7:Day_12 taxi$ javac PersonTest.java 
+PersonTest.java:16: input is already defined in testsNormalName()
+		String input = "Federica Alessia Yay";
+		       ^
+PersonTest.java:17: output is already defined in testsNormalName()
+		String output = q.getInitials(input);
+		       ^
+PersonTest.java:18: expected is already defined in testsNormalName()
+		String expected = "FAY";
+		       ^
+3 errors
+Macintosh-7:Day_12 taxi$ javac PersonTest.java 
+Macintosh-7:Day_12 taxi$ java org.junit.runner.JUnitCore PersonTest
+JUnit version 4.12
+.
+Time: 0.013
+
+OK (1 test)
+
+Macintosh-7:Day_12 taxi$ javac PersonTest.java 
+PersonTest.java:19: cannot find symbol
+symbol  : variable input
+location: class PersonTest
+		input = "Federica Alessia Yay";
+		^
+PersonTest.java:20: cannot find symbol
+symbol  : variable output
+location: class PersonTest
+		output = q.getInitials(input);
+		^
+PersonTest.java:20: cannot find symbol
+symbol  : variable input
+location: class PersonTest
+		output = q.getInitials(input);
+		                       ^
+PersonTest.java:21: cannot find symbol
+symbol  : variable expected
+location: class PersonTest
+		expected = "FAY";
+		^
+PersonTest.java:22: cannot find symbol
+symbol  : variable expected
+location: class PersonTest
+		assertEquals(expected, output);
+		             ^
+PersonTest.java:22: cannot find symbol
+symbol  : variable output
+location: class PersonTest
+		assertEquals(expected, output);
+		                       ^
+6 errors
+Macintosh-7:Day_12 taxi$ javac PersonTest.java 
+PersonTest.java:19: cannot find symbol
+symbol  : variable input
+location: class PersonTest
+		input = "Federica Alessia Yay";
+		^
+PersonTest.java:20: cannot find symbol
+symbol  : variable output
+location: class PersonTest
+		output = q.getInitials(input);
+		^
+PersonTest.java:20: cannot find symbol
+symbol  : variable input
+location: class PersonTest
+		output = q.getInitials(input);
+		                       ^
+PersonTest.java:21: cannot find symbol
+symbol  : variable expected
+location: class PersonTest
+		expected = "FAY";
+		^
+PersonTest.java:22: cannot find symbol
+symbol  : variable expected
+location: class PersonTest
+		assertEquals(expected, output);
+		             ^
+PersonTest.java:22: cannot find symbol
+symbol  : variable output
+location: class PersonTest
+		assertEquals(expected, output);
+		                       ^
+6 errors
+Macintosh-7:Day_12 taxi$ javac PersonTest.java 
+PersonTest.java:19: cannot find symbol
+symbol  : variable input
+location: class PersonTest
+		input = "  ";
+		^
+PersonTest.java:20: cannot find symbol
+symbol  : variable output
+location: class PersonTest
+		output = q.getInitials(input);
+		^
+PersonTest.java:20: cannot find symbol
+symbol  : variable input
+location: class PersonTest
+		output = q.getInitials(input);
+		                       ^
+PersonTest.java:21: cannot find symbol
+symbol  : variable expected
+location: class PersonTest
+		expected = "  ";
+		^
+PersonTest.java:22: cannot find symbol
+symbol  : variable expected
+location: class PersonTest
+		assertEquals(expected, output);
+		             ^
+PersonTest.java:22: cannot find symbol
+symbol  : variable output
+location: class PersonTest
+		assertEquals(expected, output);
+		                       ^
+6 errors
+Macintosh-7:Day_12 taxi$ javac PersonTest.java 
+Macintosh-7:Day_12 taxi$ java org.junit.runner.JUnitCore PersonTest
+JUnit version 4.12
+..E
+Time: 0.015
+There was 1 failure:
+1) testDoubleSpace(PersonTest)
+org.junit.ComparisonFailure: expected:<[  ]> but was:<[]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at PersonTest.testDoubleSpace(PersonTest.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:77)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:36)
+
+FAILURES!!!
+Tests run: 2,  Failures: 1
+
+Macintosh-7:Day_12 taxi$ javac PersonTest.java 
+PersonTest.java:22: cannot find symbol
+symbol  : method assertFalse(java.lang.String,java.lang.String)
+location: class PersonTest
+		assertFalse(expected, output);
+		^
+1 error
+Macintosh-7:Day_12 taxi$ javac PersonTest.java 
+Macintosh-7:Day_12 taxi$ java org.junit.runner.JUnitCore PersonTest
+JUnit version 4.12
+..E
+Time: 0.016
+There was 1 failure:
+1) testDoubleSpace(PersonTest)
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertFalse(Assert.java:64)
+	at org.junit.Assert.assertFalse(Assert.java:74)
+	at PersonTest.testDoubleSpace(PersonTest.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:77)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:36)
+
+FAILURES!!!
+Tests run: 2,  Failures: 1
+
+Macintosh-7:Day_12 taxi$ javac PersonTest.java 
+Macintosh-7:Day_12 taxi$ java org.junit.runner.JUnitCore PersonTest
+JUnit version 4.12
+..E
+Time: 0.016
+There was 1 failure:
+1) testDoubleSpace(PersonTest)
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertFalse(Assert.java:64)
+	at org.junit.Assert.assertFalse(Assert.java:74)
+	at PersonTest.testDoubleSpace(PersonTest.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:77)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:36)
+
+FAILURES!!!
+Tests run: 2,  Failures: 1
+
+Macintosh-7:Day_12 taxi$ javac PersonTest.java 
+Macintosh-7:Day_12 taxi$ java org.junit.runner.JUnitCore PersonTest
+JUnit version 4.12
+..
+Time: 0.013
+
+OK (2 tests)
+
+Macintosh-7:Day_12 taxi$ 
