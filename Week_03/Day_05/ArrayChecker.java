@@ -3,20 +3,22 @@ package Day05;
 /*
 Question:
 2 Checking arrays
-Create a new Java class called ArrayChecker with two methods:
+Create a new Java class called Q2_ArrayChecker with two methods:
 isSymetrical(int[ ): ] a method that returns true if the array of int provided as argument is symmetrical and
 false otherwise.
 reverse(int[ ): ] a method that takes an array of int and returns another array of int of the same size and with
 the same numbers, but in opposite order.
-Write a Groovy script that creates an object of class ArrayChecker and uses its methods to check whether a
+Write a Groovy script that creates an object of class Q2_ArrayChecker and uses its methods to check whether a
 few arrays are symmetrical and, if they are not, reverses them.
 */
 
-public class ArrayChecker {
+import java.util.Arrays;
+
+public class Q2_ArrayChecker {
 
     public static void main(String[] args) {
-        // create a an object, pracArray, of type ArrayChecker
-        ArrayChecker pracArray = new ArrayChecker();
+        // create a an object, pracArray, of type Q2_ArrayChecker
+        Q2_ArrayChecker pracArray = new Q2_ArrayChecker();
         // we call (on pracArray) the launch method because we can't call everything
         // else onto a static method that is the PSVM - hence  pracArray.launch
         // (this is a non static method and you can't call it within a a static
@@ -33,15 +35,20 @@ public class ArrayChecker {
         System.out.println();
 
         // create an asymm. int[] and instantiate with {} IOT to test our methods below
-        int[] numArray2 = {121, 14, 16, 111, 163, 124, 12};
+        int[] numArray2 = {120, 130, 140, 150, 160, 170, 180, 190};
         System.out.println(isSymmetrical(numArray2));
         System.out.println();
 
         // run reverse method on first array BUT NB: turn into String - otherwise we'll get the memory address location
-        System.out.println(reverse(numArray).toString());
+        // NB. in Java ArrayLists need to be turned into Arrays then turned into Strings - we already have Arrays so
+        // we just need to Stringify them - and that is all plus print it out of course
+        System.out.println(Arrays.toString(reverse(numArray)));
+        //System.out.println(reverse(numArray).toString());
         System.out.println();
+
         // run reverse method on second array BUT NB: turn into String
-        System.out.println(reverse(numArray2).toString());
+        System.out.println(Arrays.toString(reverse(numArray2)));
+        // System.out.println(reverse(numArray2).toString());
     }
 
     // create a boolean method that takes in an array, called symArray, as a PARAM
@@ -110,9 +117,6 @@ public class ArrayChecker {
     }
 
 }
-
-
-
 
 /*
 		if (firstElem == lastElem) {
