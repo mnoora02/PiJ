@@ -1,41 +1,49 @@
-package Week_03.Day_05;/*
-Q3 cont'd: 
-*/
-import java.util.Arrays;								// need to import java.util library in order to use Arrays
+package Day05;
 
-public class MainArrayCopierApp {
-	
-	public static void main(String[] args) {			// entry point of our application
-		
-		ArrayCopier arrayCopier = new ArrayCopier(); 	// create your object (arrayCopier) of type ArrayCopier
+import java.util.Arrays;
 
-		//int[] a = new int[6]							// can also create an array like this with a number to indicate size of array or do...
-														// NB: as we are testing to see if something is copying into another correectly it may be 
-														// better to use actual values BECAUSE when initialising empty arrays, for example, new int[], 
-														// different Java machines may initialise each value differently (0's / -1)
-														// thus initialising an array as follows is perhaps a more certain approach
-		int[] a = {1, 2, 3, 4, 5}; 						// create an int[] with var name a and list elems in curly braces...
-		int[] b = {6, 7, 8, 9, 0};						// create an int[] with var name b
+public class Q3_MainApp {
 
-		int[] c = {20, 21, 22};							// create an int[] with var name c
-		int[] d = {31, 32, 33, 34, 11, 12, 13, 14};		// create an int[] with var name d
+    // entry point for our ArrayCopier - we will create an object of type copier and we will use the copy method on it
+    //
+    public static void main(String[] args) {
+        Q3_ArrayCopier arrayCopier = new Q3_ArrayCopier();
 
+        //int[] a = new int[input a number for the size of the array];
+        // create an int[] with var name a and list elems in curly braces...
+        int[] a = {1, 2, 3, 4, 5};
 
-		arrayCopier.copy(a, b);							// arrayCopier.copy - calling/using copy method from ArrayCopier.java which takes 2 PARAMS..
-														// which in this case are 2 arrays which we will create above also
-		System.out.println(Arrays.toString(b)); 		// print output instead of b, c, d - NB: use Arrays.toString(param) can also do with.. 
-														// ArrayList which you convert to an Array first before converting to String
-		System.out.println();							
+        // int[] b = new int[5];  <- we are initialising an array with 5 slots NB diff't JVM initialise arrays differently
+        // some might initialise with 0's others with -1 others with an empty array or some may come up with a error
+        // therefore it is better to test things out with actual values
+        // create an int[] with var name b
+        int[] b = {6, 7, 8, 9, 0};
 
-		arrayCopier.copy(a, c);							// src is longer/larger than dst
-		System.out.println(Arrays.toString(c));
-		System.out.println();
+        // create an int[] with var name c
+        int[] c = {20, 21, 22};
 
-		arrayCopier.copy(a, d);							// src is shorter/smaller than dst
-		System.out.println(Arrays.toString(d));
-	}
+        // create an int[] with var name d
+        int[] d = {31, 32, 33, 34, 35, 11, 12, 13};
 
+        // arrayCopier.copy - calling/using copy method from ArrayCopier.java which takes 2 PARAMS..
+        // which in this case are 2 arrays which we will create above also
+        // src is same length as dst
+        System.out.println("a = [1, 2, 3, 4, 5] \nb = [6, 7, 8, 9, 0]\nwhen copied\nb = " + Arrays.toString(b));
+        System.out.println();
 
+        // print output instead of b, c, d - NB: use Arrays.toString(param) can also do with..
+        // ArrayList which you convert to an Array first before converting to String
+
+        // src is longer/larger than dst
+        arrayCopier.copy(a, c);
+        System.out.println("a = [1, 2, 3, 4, 5] \nc = [20, 21, 22]\nwhen copied\nc = " + Arrays.toString(c));
+        System.out.println();
+
+        // src is shorter/smaller than dst
+        arrayCopier.copy(a, d);
+        System.out.println("a = [1, 2, 3, 4, 5] \nd = [31, 32, 33, 34, 11, 12, 13, 14]\nwhen copied\nd = " + Arrays.toString(d));
+
+    }
 } // END of class
 
 
