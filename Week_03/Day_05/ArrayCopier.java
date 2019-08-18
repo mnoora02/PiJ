@@ -1,5 +1,9 @@
 package Day05;
 
+        import jdk.swing.interop.SwingInterOpUtils;
+
+        import java.util.Arrays;
+
 /*
 3 Copying arrays
 Create a new Java class called ArrayCopier with a method called copy that takes two arrays of integers as parameters.
@@ -15,7 +19,7 @@ in all three cases:
 */
 public class Q3_ArrayCopier {
     // create a method called copy that takes two int arrays as PARAMs
-    public void copy(int[] src, int[] dst) {
+    public int[] copy(int[] src, int[] dst) {
         // (src - source array, dst - destination array)
         // int[] output = new int[dst.length]
 
@@ -32,26 +36,28 @@ public class Q3_ArrayCopier {
         // NOT forgetting to write public int copy(int[] src, int[] dst) instead of public void copy...
         // and you'd print output not b,c or d as it is in the MainApp.java right now
 
+        int[] output = new int[dst.length];
+
         // if the length of the src array is the same size or longer than the length of the dst array
         // then we go as far as the dst.length and fill in the values from src to dst
         if (src.length >= dst.length) {
             for (int i = 0; i < dst.length; i++) {
-                dst[i] = src[i];
+                output[i] = src[i];
             }
         } else {
             // if src array is shorter than the dst array
             // assign dst index positions values as 0s first before we copy from src
             for (int i = 0; i < dst.length; i++) {
-                dst[i] = 0;
+                output[i] = 0;
             }
             // cont'd (src array is shorter than dst array)
             // dst index positions will be filled with values from src index positions and as per
             for (int i = 0; i < src.length; i++) {
-                dst[i] = src[i];
+                output[i] = src[i];
                 // the previous loop - outstanding dst index positions will have been filled with 0's
             }
         }
-        //return output;
+        return output;
     }
 } // END of class
 
