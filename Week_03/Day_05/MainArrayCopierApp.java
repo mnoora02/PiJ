@@ -1,6 +1,6 @@
 package Day05;
 
-import java.util.Arrays;
+        import java.util.Arrays;
 
 public class Q3_MainApp {
 
@@ -28,20 +28,18 @@ public class Q3_MainApp {
         // arrayCopier.copy - calling/using copy method from ArrayCopier.java which takes 2 PARAMS..
         // which in this case are 2 arrays which we will create above also
         // src is same length as dst
-        System.out.println("a = [1, 2, 3, 4, 5] \nb = [6, 7, 8, 9, 0]\nwhen copied\nb = " + Arrays.toString(b));
+        System.out.println("a = [1, 2, 3, 4, 5] \nb = [6, 7, 8, 9, 0]\nwhen copied\no = " + Arrays.toString(arrayCopier.copy(a, b)));
         System.out.println();
 
         // print output instead of b, c, d - NB: use Arrays.toString(param) can also do with..
         // ArrayList which you convert to an Array first before converting to String
 
         // src is longer/larger than dst
-        arrayCopier.copy(a, c);
-        System.out.println("a = [1, 2, 3, 4, 5] \nc = [20, 21, 22]\nwhen copied\nc = " + Arrays.toString(c));
+        System.out.println("a = [1, 2, 3, 4, 5] \nc = [20, 21, 22]\nwhen copied\no = " + Arrays.toString(arrayCopier.copy(a, c)));
         System.out.println();
 
         // src is shorter/smaller than dst
-        arrayCopier.copy(a, d);
-        System.out.println("a = [1, 2, 3, 4, 5] \nd = [31, 32, 33, 34, 11, 12, 13, 14]\nwhen copied\nd = " + Arrays.toString(d));
+        System.out.println("a = [1, 2, 3, 4, 5] \nd = [31, 32, 33, 34, 11, 12, 13, 14]\nwhen copied\no = " + Arrays.toString(arrayCopier.copy(a, d)));
 
     }
 } // END of class
