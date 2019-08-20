@@ -1,21 +1,23 @@
-package Week_03.Day_05;// this MainApp file was previously called QuestionFourMain.java
+// this MainApp file was previously called QuestionFourMain.java
 
-public class MainMatrixApp {
+package Day05;
 
-	public static void main(String[] args) {
+public class Q4_MatrixMainApp {
 
-		Matrix runMatrix = new Matrix(4, 4); 	// create our matrix and remember in the constructor we stated that
-												// it takes two parameters telling java we want a 2D array cols x rows
+    public static void main(String[] args) {
 
-		System.out.println(runMatrix);			// we can test that the matrix cells are all initialised to 1
+        Q4_Matrix runMatrix = new Q4_Matrix(4, 4);
+        System.out.println("Base matrix only\n" + runMatrix + "\n");
 
-		runMatrix.setElement(3, 2, 7);
-		runMatrix.setRow(1, "9,8,7,6");
-		runMatrix.setColumn(0, "34,56,78,89");  //
-		//runMatrix.toString();
-		runMatrix.toPretty();
-		System.out.println();
+        runMatrix.setElement(3, 2, 7);
+        System.out.println("Set elem. pos1/index_row = 3, pos2/index_column = 2, value = 7\n" + runMatrix + "\n");
 
+        runMatrix.setRow(1, "9,8,7,6");
+        System.out.println("Set row: 1\n" + runMatrix + "\n");
 
-	}
+        runMatrix.setColumn(0, "34,56,78,89");
+        System.out.println("Set column: 0\n" + runMatrix + "\n");
+
+        runMatrix.toPretty();
+    }
 }
