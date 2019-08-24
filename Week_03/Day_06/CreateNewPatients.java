@@ -1,75 +1,36 @@
-package Week_03.Day_06;
+package Day_06;
 
-public class CreateNewPatients {
+public class Q3_DblPatientMainApp {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		DoubleListPatient fire = new DoubleListPatient("Fire", 54, "Flu");
-		DoubleListPatient water = new DoubleListPatient("Water", 24, "Cold");
-		DoubleListPatient earth = new DoubleListPatient("Earth", 94, "Gout");
+        Q3_DblListPatient fire = new Q3_DblListPatient("Fire", 54, "Flu");
+        Q3_DblListPatient water = new Q3_DblListPatient("Water", 24, "Cold");
+        Q3_DblListPatient earth = new Q3_DblListPatient("Earth", 94, "Gout");
 
-		DoubleListHospitalManager dblMan = new DoubleListHospitalManager(); 
+        Q3_DblListHospitalMngr dblMan = new Q3_DblListHospitalMngr();
 
-		dblMan.addPatient(fire);
-		dblMan.addPatient(water);
-		dblMan.addPatient(earth);
+        dblMan.addPatient(fire);
+        dblMan.addPatient(water);
+        dblMan.addPatient(earth);
 
-		// dblMan.toPrint(); 
-		// System.out.println(); 
-		// dblMan.printBackwards();
+        // dblMan.toPrint();
+        // System.out.println();
+        // dblMan.printBackwards();
 
-		dblMan.deletePatient("Fire");
-		dblMan.toPrint(); 
-		System.out.println(); 
+        dblMan.deletePatient("Fire");
+        dblMan.toPrint();
+        System.out.println();
 
-		dblMan.printBackwards();
+        dblMan.printBackwards();
 
-		dblMan.addPatient(new DoubleListPatient("Air", 12, "Wind"));	// anonymous declarations/objects - created inside argument with any PARAMs
-																		// cos you haven't called it air as we have fire, water etc...
-		System.out.println(dblMan.deletePatient("Mud"));				// delete item not in list - should get false because it didn't find patient
-		dblMan.toPrint();
-		dblMan.printBackwards();	
-	}
-} 
+        // anonymous declarations/objects - created inside argument with any PARAMs
+        // cos you haven't called it air as we have fire, water etc...
+        dblMan.addPatient(new Q3_DblListPatient("Air", 12, "Wind"));
 
-
-
-/**
-code minus the comments: 
-
-public class CreateNewPatients {
-
-	public static void main(String[] args) {
-
-		DoubleListPatient fire = new DoubleListPatient("Fire", 54, "Flu");
-		DoubleListPatient water = new DoubleListPatient("Water", 24, "Cold");
-		DoubleListPatient earth = new DoubleListPatient("Earth", 94, "Gout");
-
-		DoubleListHospitalManager dblMan = new DoubleListHospitalManager(); 
-
-		dblMan.addPatient(fire);
-		dblMan.addPatient(water);
-		dblMan.addPatient(earth);
-
-		// dblMan.toPrint(); 
-		// System.out.println(); 
-		// dblMan.printBackwards();
-
-		dblMan.deletePatient("Fire");
-		dblMan.toPrint(); 
-		System.out.println(); 
-
-		dblMan.printBackwards();
-
-		dblMan.addPatient(new DoubleListPatient("Air", 12, "Wind"));	// anonymous declarations
-		System.out.println(dblMan.deletePatient("Mud"));
-		dblMan.toPrint();
-		dblMan.printBackwards();	
-	}
-} 
-
-@Override 
-public void turnOff() {
-	le.turnOff()
+        // delete item not in list - should get false because it didn't find patient
+        System.out.println(dblMan.deletePatient("Mud"));
+        dblMan.toPrint();
+        dblMan.printBackwards();
+    }
 }
-*/
