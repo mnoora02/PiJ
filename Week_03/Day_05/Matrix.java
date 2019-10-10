@@ -1,4 +1,5 @@
-package Week_03.Day_05;/*
+package Day_05;
+
 /*
 4 Creating matrices
 Create a class Matrix that has a 2-D array of integers as a field. The class should have methods for:
@@ -57,12 +58,12 @@ public class Q4_Matrix {
 
     // a method setElement(int,int,int) to modify one element of the array, given its
     // position (the first two integers) and the new value to be put in that position
-    // (the third integer). The method must check that the indeces are valid before
-    // modifying the array to avoid an IndexOutOfBoundsException. If the indeces are
+    // (the third integer). The method must check that the indices are valid before
+    // modifying the array to avoid an IndexOutOfBoundsException. If the indices are
     // invalid, the method will do nothing and the third argument will be ignored.
     public void setElement(int pos1, int pos2, int value) {
-        if (pos1 >= 0 && pos1 < array2D.length
-                && pos2 >=0 && pos2 < array2D[0].length) {
+        if (pos1 >= 0 && pos1 < array2D.length &&
+                pos2 >=0 && pos2 < array2D[0].length) {
             // if conditions are met then the 2D pos. takes on the value
             array2D[pos1][pos2] = value;
         }
@@ -78,7 +79,7 @@ public class Q4_Matrix {
             String[] stringArray = values.split(",");
             // check to see if size of stringArray is equal to the size of the row. To get length of a row in a 2D array
             // array[rowIndex].length - we go to the row we want insert an item on, then find the length of that row
-            // i.e. the no. of columns in that row. we then try to fit it in
+            // i.e. the no. of columns in that row. we then try to fit it in i.e. make sure its length is same as stringArray.length
             if (stringArray.length == array2D[rowIndex].length) {
                 // we N2 convert our String[] into an int[] - we N2 pass each element into it
                 // intArray is the same length as stringArray but there is nothing in it at the mo.
@@ -91,7 +92,6 @@ public class Q4_Matrix {
                 }
                 array2D[rowIndex] = intArray;
             }
-
         }
     }
 
@@ -103,6 +103,7 @@ public class Q4_Matrix {
     public void setColumn(int columnIndex, String values) {
         if (columnIndex >= 0 && columnIndex < array2D[0].length) {
             String[] stringArray = values.split(",");
+            // NB. in a 2D array when you do array.length you will get back the no. of rows in your 2D array
             if (stringArray.length == array2D.length) {
                 int[] intArray = new int[stringArray.length];
                 for (int i = 0; i < stringArray.length; i++) {
@@ -114,11 +115,11 @@ public class Q4_Matrix {
                 }
             }
         }
-
     }
 
     // a method toString() that returns the values in an array as a String using square brackets, commas & semicolons
     // e.g. “[1,2,3;4,5,6;3,2,1]”.
+    @Override
     public String toString() {
         // use StringBuilder, you can write in the () string that you want to write at the beginning / a blank string
         StringBuilder sb = new StringBuilder("[");
@@ -163,6 +164,23 @@ public class Q4_Matrix {
             //if (i < array2D.length - 1) {
             System.out.println();
             //}
+        }
+    }
+
+    //Q5* one liner matrices
+    // Extend your Matrix class with a method setMatrix(String) that takes a String representing the numbers to be
+    // put in the elements of the array separated by commas, separating rows by semicolons, e.g. 1,2,3;4,5,6;7,8,9.
+    public void setMatrix(String stringMate) {
+        String[] rows = stringMate.split(";");
+        for (int i = 0; i < rows.length; i++) {
+            String singleRow = rows[i];
+            String[] elements = singleRow.split(",");
+            for (int j = 0; j < elements.length; j++) {
+                String singleElem = elements[j].trim();
+                int singleNumElem = Integer.parseInt(singleElem);
+                // array2D = new int[size1_rows][size2_columns];
+                array2D[i][j] = singleNumElem;
+            }
         }
     }
 
