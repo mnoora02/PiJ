@@ -170,18 +170,28 @@ public class Q4_Matrix {
     //Q5* one liner matrices
     // Extend your Matrix class with a method setMatrix(String) that takes a String representing the numbers to be
     // put in the elements of the array separated by commas, separating rows by semicolons, e.g. 1,2,3;4,5,6;7,8,9.
+    // We will kinda be doing the opposite of the toString method -
+    // here we will take a string and set it into an array e.g. array2D
+    // whereas the toString method was taking our array and converting it into a string
+    // NB. each element is separated by a comma, each row is separated by a semi-colon
     public void setMatrix(String stringMate) {
+        // first we can split our string into rows using a delimiter ';' and store the result into a String[] called rows
         String[] rows = stringMate.split(";");
+        // next for each row we want to store it as a single row
         for (int i = 0; i < rows.length; i++) {
             String singleRow = rows[i];
+            // then get the individual elements in  a single row and split them with delimiter ',' and store in another String[] called elements
             String[] elements = singleRow.split(",");
+            // next we iterate through the array of elements and store each element as a single String element
+            // NB. our array2D is an int[] therefore we need to convert our String elements into integer elements (ie.e integerise our elements)
+            // also we can handle any whitespaces inputted by the user with the method .trim() - otherwise we may get an error
             for (int j = 0; j < elements.length; j++) {
                 String singleElem = elements[j].trim();
                 int singleNumElem = Integer.parseInt(singleElem);
-                // array2D = new int[size1_rows][size2_columns];
+                // we have our [i] index position and [j] index position - therefore we already have positions into which we can insert/place/assign our elements
+                // in a 2D array [i] represents the row, [j] represents the column - so we write the name[i][j] = item/elem/value you want to insert
                 array2D[i][j] = singleNumElem;
             }
         }
     }
-
 } //END of class
